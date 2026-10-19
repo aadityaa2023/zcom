@@ -2,7 +2,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, Heart, ArrowRight, Star, Quote, ShoppingCart, Bird, Leaf } from 'lucide-react';
-import BrandPartners from '../components/BrandPartners';
 import ProductCard from '../components/ProductCard';
 import api, { BASE_URL } from '../services/api';
 import { useCart } from '../context/CartContext';
@@ -292,7 +291,7 @@ export default function Home() {
                   <div className="flex flex-wrap items-center gap-4">
                     <button
                       onClick={() => navigate(banner.buttonLink || '/products')}
-                      className="inline-flex items-center justify-center font-extrabold text-sm bg-white hover:bg-gray-100 text-gray-900 px-10 py-4 rounded-full transition-all duration-300 active:scale-95 shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:shadow-[0_8px_40px_rgb(224,80,208,0.3)] cursor-pointer group"
+                      className="inline-flex items-center justify-center font-extrabold text-sm bg-white hover:bg-gray-100 text-gray-900 px-10 py-4 rounded-full transition-all duration-300 active:scale-95 cursor-pointer group"
                     >
                       {banner.buttonText || 'Shop Collection'}
                       <ArrowRight size={16} className="ml-2 group-hover:translate-x-1.5 transition-transform" />
@@ -344,7 +343,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-center gap-4">
                   <button
                     onClick={() => navigate('/products')}
-                    className="inline-flex items-center justify-center font-extrabold text-sm bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-4 rounded-full transition-all duration-300 active:scale-95 shadow-[0_8px_30px_rgba(245,158,11,0.3)] hover:shadow-[0_8px_40px_rgba(245,158,11,0.5)] cursor-pointer group"
+                    className="inline-flex items-center justify-center font-extrabold text-sm bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-10 py-4 rounded-full transition-all duration-300 active:scale-95 cursor-pointer group"
                   >
                     Shop Collection
                     <ArrowRight size={16} className="ml-2 group-hover:translate-x-1.5 transition-transform" />
@@ -449,12 +448,6 @@ export default function Home() {
 
 
 
-      {/* ─────────────────────────────────────────────────────────────
-          5. BRAND PARTNERS ROW (5 Icons in Pink Theme)
-      ───────────────────────────────────────────────────────────── */}
-      <section className="relative z-10 py-2 sm:py-4">
-        <BrandPartners />
-      </section>
 
       {/* ─────────────────────────────────────────────────────────────
           6. BEST SELLING PRODUCTS (Real Product Cards)
