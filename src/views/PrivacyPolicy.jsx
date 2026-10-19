@@ -20,7 +20,7 @@ const PrivacyPolicy = () => {
       <div className="max-w-3xl mx-auto px-3.5 sm:px-6 pb-16 sm:pb-20">
         <div className="bg-white rounded-2xl border border-border p-5 sm:p-6 md:p-10 shadow-sm">
           <p className="text-muted-foreground leading-relaxed mb-8 text-sm">
-            At <strong className="text-foreground">Poonch Pet Store</strong>, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit <strong className="text-brand-pink">www.poonchpetstore.com</strong>.
+            At <strong className="text-foreground">Zyricx</strong>, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit <strong className="text-brand-pink">zyricx.app</strong>.
           </p>
 
           <Section title="1. Information We Collect">
@@ -46,11 +46,11 @@ const PrivacyPolicy = () => {
           </Section>
 
           <Section title="5. Your Rights">
-            <p>You have the right to access, correct, or delete your personal information at any time. Contact us at <a href="mailto:support@poonchpetstore.com" className="text-brand-pink font-semibold hover:underline">support@poonchpetstore.com</a> and we'll respond within 30 days.</p>
+            <p>You have the right to access, correct, or delete your personal information at any time. Contact us at <a href="mailto:support@zyricx.app" className="text-brand-pink font-semibold hover:underline">support@zyricx.app</a> and we'll respond within 30 days.</p>
           </Section>
 
           <Section title="6. Contact Us">
-            <p>support@poonchpetstore.com<br />+91 7088202122<br />Jai Devi Nagar, Garh Road , Meerut</p>
+            <p>support@zyricx.app<br />+91 7088202122<br />Jai Devi Nagar, Garh Road , Meerut</p>
           </Section>
         </div>
       </div>

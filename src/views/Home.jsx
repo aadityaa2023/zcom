@@ -1,7 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Heart, ArrowRight, Star, Quote, ShoppingCart, Bird, Leaf } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Heart, ArrowRight, Star, Quote, ShoppingCart, Leaf } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import api, { BASE_URL } from '../services/api';
 import { useCart } from '../context/CartContext';
@@ -122,34 +122,24 @@ const BEST_SELLING_PRODUCTS = [
   },
 ];
 
-const BIRD_TYPES = [
-  { id: 'parrot', name: 'Parrot', image: '/assets/birds/parrot.jpg' },
-  { id: 'cockatiel', name: 'Cockatiel', image: '/assets/birds/cockatiel.jpg' },
-  { id: 'budgie', name: 'Budgie', image: '/assets/birds/budgie.jpg' },
-  { id: 'conure', name: 'Sun Conure', image: '/assets/birds/conure.jpg' },
-  { id: 'lovebird', name: 'Lovebird', image: '/assets/birds/lovebird.jpg' },
-  { id: 'canary', name: 'Canary', image: '/assets/birds/canary.jpg' },
-];
-
-
 const TESTIMONIALS_DATA = [
   {
     id: 1,
-    quote: "My cockatiel loves the three-perch play stand! It’s sturdy, easy to clean, and keeps him entertained for hours outside his cage.",
+    quote: "Exceptional shopping experience! The product arrived two days early, perfectly packaged, and exactly as described on the store.",
     author: "Sarah M.",
-    role: "Verified Cockatiel Parent",
+    role: "Verified Buyer",
     avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&q=80",
     rating: 5,
-    tag: "Multi-Perch Activity Stand",
+    tag: "Fast Nationwide Delivery",
   },
   {
     id: 2,
-    quote: "The hand-knitted woolen collar is adorable! So soft on my cat’s neck and looks amazing in photos.",
+    quote: "Zyricx has become my go-to online store. High build quality, responsive customer service, and smooth checkout every single time.",
     author: "David L.",
-    role: "Verified Cat Parent",
+    role: "Verified Customer",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&q=80",
     rating: 5,
-    tag: "Hand-Knitted Woolen Collar",
+    tag: "Authentic Quality Guaranteed",
   },
 ];
 
@@ -285,7 +275,7 @@ export default function Home() {
                   </h1>
                   
                   <p className="text-sm sm:text-lg text-white/80 leading-relaxed max-w-lg mb-8 font-medium border-l-2 border-white/20 pl-4">
-                    Handcrafted natural pine stands, chewable play gyms, and safe perches designed for parrots, cockatiels, budgies, and feathered friends.
+                    Explore curated premium collections, trending electronics, modern lifestyle gear, and everyday essentials with lightning-fast delivery.
                   </p>
                   
                   <div className="flex flex-wrap items-center gap-4">
@@ -493,10 +483,10 @@ export default function Home() {
             Real Customer Stories
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold tracking-tight text-gray-900">
-            Loved by Pets, Cherished by Humans
+            Loved by Customers Across India
           </h2>
           <p className="mt-2 text-sm sm:text-base text-gray-600">
-            "Safe Play, Happy Tails &amp; Feathered Friends." — See how our non-toxic accessories bring joy every day.
+            "Fast dispatch, premium quality, and seamless support." — See what real shoppers say about Zyricx.
           </p>
         </div>
 

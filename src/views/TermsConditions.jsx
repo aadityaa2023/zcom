@@ -20,15 +20,15 @@ const TermsConditions = () => {
       <div className="max-w-3xl mx-auto px-3.5 sm:px-6 pb-16 sm:pb-20">
         <div className="bg-white rounded-2xl border border-border p-5 sm:p-6 md:p-10 shadow-sm">
           <p className="text-muted-foreground leading-relaxed mb-8 text-sm">
-            Welcome to <strong className="text-foreground">Poonch Pet Store</strong> (<strong className="text-brand-pink">www.poonchpetstore.com</strong>). These Terms and Conditions govern the use of our website and services. By accessing this website, you accept these terms in full.
+            Welcome to <strong className="text-foreground">Zyricx</strong> (<strong className="text-brand-pink">zyricx.app</strong>). These Terms and Conditions govern the use of our website and services. By accessing this website, you accept these terms in full.
           </p>
 
           <Section title="1. Use of the Website">
-            <p>You must be at least 18 years of age to use this website. You agree to use Poonch Pet Store only for lawful purposes and in a manner that does not infringe the rights of others or inhibit their use and enjoyment of the website.</p>
+            <p>You must be at least 18 years of age to use this website. You agree to use Zyricx only for lawful purposes and in a manner that does not infringe the rights of others or inhibit their use and enjoyment of the website.</p>
           </Section>
 
           <Section title="2. Products and Availability">
-            <p>All products — including natural wood bird accessories, hand-knitted cat collars, and other pet accessories — and their prices are subject to change without notice. We reserve the right to limit sales of any product to any person, geographic region, or jurisdiction.</p>
+            <p>All products listed across our catalog — including consumer electronics, apparel, home essentials, and lifestyle accessories — and their prices are subject to change without notice. We reserve the right to limit quantities of any product per order or household.</p>
           </Section>
 
           <Section title="3. Payment and Billing">
@@ -36,7 +36,7 @@ const TermsConditions = () => {
           </Section>
 
           <Section title="4. Shipping and Delivery">
-            <p>Standard processing time is 1–3 business days. Delivery typically takes 3–7 business days depending on destination. Tracking links are provided upon dispatch. Poonch Pet Store is not responsible for delays caused by courier services or customs for international orders.</p>
+            <p>Standard processing time is 1–3 business days. Delivery typically takes 3–7 business days depending on destination. Tracking links are provided upon dispatch. Zyricx is not responsible for delays caused by courier services or customs for international orders.</p>
           </Section>
 
           <Section title="5. Returns and Refunds">
@@ -44,15 +44,15 @@ const TermsConditions = () => {
           </Section>
 
           <Section title="6. Intellectual Property">
-            <p>Unless otherwise stated, Poonch Pet Store and/or its licensors own all intellectual property rights for all material on this website, including our logo, product designs, photography, and brand identity. All rights are reserved.</p>
+            <p>Unless otherwise stated, Zyricx and/or its licensors own all intellectual property rights for all material on this website, including our logo, product designs, photography, and brand identity. All rights are reserved.</p>
           </Section>
 
           <Section title="7. Limitation of Liability">
-            <p>In no event shall Poonch Pet Store, nor any of its officers, directors, or employees, be liable to you for anything arising out of or in any way connected with your use of this website beyond the value of the product(s) purchased.</p>
+            <p>In no event shall Zyricx, nor any of its officers, directors, or employees, be liable to you for anything arising out of or in any way connected with your use of this website beyond the value of the product(s) purchased.</p>
           </Section>
 
           <Section title="8. Contact Us">
-            <p>📧 support@poonchpetstore.com<br />📞 +91 7088202122<br />📍 Jai Devi Nagar, Garh Road , Meerut</p>
+            <p>📧 support@zyricx.app<br />📞 +91 7088202122<br />📍 Jai Devi Nagar, Garh Road , Meerut</p>
           </Section>
         </div>
       </div>

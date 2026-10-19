@@ -11,7 +11,7 @@ import {
 } from './ui/dropdown-menu';
 import {
   ShoppingCart, Search, Menu, X, User,
-  Package, Phone, Mail, MapPin, Heart, ChevronDown, Bird
+  Package, Phone, Mail, MapPin, Heart, ChevronDown
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -196,11 +196,11 @@ const Navbar = () => {
             </a>
             <span className="text-gray-600">•</span>
             <a
-              href="mailto:support@zcom.com"
+              href="mailto:support@zyricx.app"
               className="flex items-center gap-1.5 hover:text-amber-400 transition-colors truncate"
             >
               <Mail size={12} className="text-amber-400 shrink-0" />
-              <span className="truncate">support@zcom.com</span>
+              <span className="truncate">support@zyricx.app</span>
             </a>
           </div>
 
@@ -247,13 +247,13 @@ const Navbar = () => {
 
               <Link to="/" className="flex items-center gap-2 sm:gap-2.5 group">
                 <img
-                  src="/logo.jpeg"
-                  alt="Zcom"
-                  className="w-8 h-8 xs:w-9 xs:h-9 rounded-xl object-contain ring-2 ring-amber-400/30 group-hover:ring-amber-500 shadow-sm transition-all shrink-0 bg-white"
+                  src="/logo.svg"
+                  alt="Zyricx"
+                  className="w-8 h-8 xs:w-9 xs:h-9 rounded-xl object-contain shadow-sm transition-all shrink-0"
                 />
                 <div className="flex flex-col">
                   <span className="font-extrabold text-xl xs:text-2xl text-gray-900 tracking-tight group-hover:text-amber-600 transition-colors flex items-center gap-0.5">
-                    Z<span className="text-amber-500">com</span>
+                    Zyri<span className="text-amber-500">cx</span>
                   </span>
                 </div>
               </Link>

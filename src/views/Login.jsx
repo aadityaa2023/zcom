@@ -63,8 +63,8 @@ const Login = () => {
           <div className="absolute -top-12">
             <Link to="/" className="inline-flex items-center justify-center bg-background p-1.5 rounded-2xl shadow-md border border-amber-300/40">
               <img
-                src="/logo.jpeg"
-                alt="Zcom"
+                src="/logo.svg"
+                alt="Zyricx"
                 className="w-20 h-20 rounded-xl object-contain p-1"
               />
             </Link>
@@ -74,7 +74,7 @@ const Login = () => {
             {/* Header Text */}
             <h1 className="text-2xl sm:text-3xl font-extrabold text-foreground leading-tight mb-3 tracking-tight">
               {requiresPhone ? 'Complete Signup' : (
-                <>Welcome to <span className="text-amber-500">Zcom</span></>
+                <>Welcome to <span className="text-amber-500">Zyricx</span></>
               )}
             </h1>
 

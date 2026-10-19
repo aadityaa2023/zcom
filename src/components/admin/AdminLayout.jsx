@@ -34,7 +34,7 @@ const AdminLayout = () => {
           <div className="w-8 h-8 rounded-lg bg-brand-pink text-white flex items-center justify-center shrink-0">
             <ShieldCheck size={18} />
           </div>
-          <span className="font-extrabold text-brand-pink tracking-wider uppercase text-sm">Poonch Admin</span>
+          <span className="font-extrabold text-brand-pink tracking-wider uppercase text-sm">Zyricx Admin</span>
         </div>
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

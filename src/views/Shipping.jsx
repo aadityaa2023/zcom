@@ -9,7 +9,7 @@ const PLANS = [
 const POLICIES = [
   { icon: Clock, title: 'Processing Time', desc: 'All orders are processed within 1–3 business days after payment confirmation.' },
   { icon: Mail, title: 'Tracking Updates', desc: 'Tracking links are provided via email upon dispatch. Allow 24 hours for updates.' },
-  { icon: FileText, title: 'Care Instructions', desc: 'Every shipped package includes a Care Instructions Card for wood and knitted products.' },
+  { icon: FileText, title: 'Quality Assurance', desc: 'Every shipped package includes our verified quality checklist and manufacturer care details.' },
 ];
 
 const Shipping = () => {
@@ -74,9 +74,9 @@ const Shipping = () => {
             <h3 className="font-bold text-lg text-foreground">Order Tracking</h3>
           </div>
           <p className="text-muted-foreground leading-relaxed text-sm">
-            Once your Poonch Pet Store order has been dispatched, you'll receive an email with your tracking number and carrier link. 
+            Once your Zyricx order has been dispatched, you'll receive an email with your tracking number and carrier link. 
             Please allow up to <strong>24 hours</strong> for updates. If you haven't received tracking within 5 business days, contact us at{' '}
-            <a href="mailto:support@poonchpetstore.com" className="text-brand-pink font-semibold hover:underline">support@poonchpetstore.com</a> or call{' '}
+            <a href="mailto:support@zyricx.app" className="text-brand-pink font-semibold hover:underline">support@zyricx.app</a> or call{' '}
             <a href="tel:+917088202122" className="text-brand-pink font-semibold hover:underline">+91 7088202122</a>.
           </p>
         </div>

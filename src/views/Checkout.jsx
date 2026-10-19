@@ -98,7 +98,7 @@ const Checkout = () => {
       const orderData = {
         items: cart.items.map(i => ({
           product: i.product?._id || i.product,
-          name: i.product?.name || i.name || 'Pet Product',
+          name: i.product?.name || i.name || 'Product',
           image: getItemImageUrl(i),
           price: i.product?.price ?? i.price ?? 0,
           quantity: i.quantity,

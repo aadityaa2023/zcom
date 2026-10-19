@@ -1,14 +1,13 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 
 const FAQS = [
-  { q: "Are your wooden bird stands safe for chewing?", a: "Yes! We use 100% natural wood and non-toxic materials with no artificial dyes or glues. Natural chewing behavior is completely normal for birds and our stands are designed to support it safely." },
-  { q: "How do I clean the wooden bird playstands?", a: "Simply wipe the surface with a dry cloth or soft brush and let it air-dry naturally. Do not submerge or clean with water to protect the natural wood integrity. For stubborn spots, use a slightly damp cloth only." },
-  { q: "How do I wash the woolen cat collars?", a: "Hand-wash gently in cold water with a mild, pet-safe detergent and lay flat to dry. Do not tumble dry or wring. This preserves the shape and softness of the hand-knitted wool." },
-  { q: "What payment methods do you accept?", a: "We accept all major payment methods including Stripe, PayPal, Razorpay, Apple Pay, and Google Pay. All transactions are secured with industry-standard encryption." },
-  { q: "How long does shipping take?", a: "Standard processing time is 1–3 business days. Delivery typically takes 3–7 business days depending on your destination. You will receive a tracking link via email once your order is dispatched." },
-  { q: "What is your return policy?", a: "We offer 30-day hassle-free returns for unused items in their original packaging. Damaged or defective items are eligible for an immediate replacement or full refund." },
-  { q: "Do you offer wholesale for pet shops?", a: "Yes! We offer wholesale pricing for local pet shops and avian specialists upon request. Please reach out to support@poonchpetstore.com with details about your business." },
-  { q: "Are your products suitable for all bird species?", a: "Our bird accessories are designed for a range of pet birds including parrots, cockatiels, budgerigars, and conures. Each product listing specifies the recommended bird sizes." },
+  { q: "How do I track my order?", a: "Once your order is dispatched, you will receive an SMS and email notification with your tracking link and carrier details. You can also view live tracking under 'My Orders' in your account." },
+  { q: "What payment methods do you accept?", a: "We accept all major payment methods including UPI, Credit/Debit cards, Net Banking, Razorpay, Apple Pay, and Google Pay. All transactions are protected with 256-bit bank-grade encryption." },
+  { q: "How long does shipping take?", a: "Standard dispatch takes 1–2 business days. Delivery typically takes 3–5 business days depending on your pincode. Express shipping options are available at checkout." },
+  { q: "What is your return & exchange policy?", a: "We offer a 7-day hassle-free return and replacement policy for unused items in their original packaging. Damaged or defective items are eligible for an immediate replacement." },
+  { q: "Are all products 100% genuine and authentic?", a: "Yes. Every item sold on Zyricx is directly sourced from authorized distributors and verified manufacturers with guaranteed authenticity." },
+  { q: "Can I cancel or modify my order after placing it?", a: "You can modify or cancel your order within 2 hours of placement directly from your account page, or by contacting customer support before dispatch." },
+  { q: "Do you offer corporate or bulk purchase discounts?", a: "Yes! We offer customized quotes and bulk pricing for corporate gifting and wholesale orders. Please reach out to support@zyricx.app with your requirements." },
 ];
 
 const FAQ = () => {
@@ -48,8 +47,8 @@ const FAQ = () => {
           <p className="text-lg sm:text-xl font-bold text-foreground mb-1.5 sm:mb-2">Still have questions?</p>
           <p className="text-muted-foreground mb-3 text-xs sm:text-sm">Can't find what you're looking for? Reach out directly.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-brand-pink font-semibold text-xs sm:text-sm">
-            <a href="mailto:support@poonchpetstore.com" className="hover:underline">
-              support@poonchpetstore.com
+            <a href="mailto:support@zyricx.app" className="hover:underline">
+              support@zyricx.app
             </a>
             <span className="hidden sm:inline text-brand-pink/40">|</span>
             <a href="tel:+917088202122" className="hover:underline">

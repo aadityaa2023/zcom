@@ -88,7 +88,7 @@ const AdminLogin = () => {
               <Input
                 id="admin-email"
                 type="email"
-                placeholder="admin@poonch.com"
+                placeholder="admin@zyricx.app"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

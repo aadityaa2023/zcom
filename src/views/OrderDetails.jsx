@@ -161,7 +161,7 @@ const OrderDetails = () => {
         <body>
           <div class="header">
             <div>
-              <h1>Poonch Pet Store</h1>
+              <h1>Zyricx</h1>
               <p style="color: #6B7280; font-size: 14px;">Safe Play, Happy Tails & Feathered Friends</p>
             </div>
             <div style="text-align: right;">

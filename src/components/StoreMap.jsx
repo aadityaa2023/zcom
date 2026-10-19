@@ -19,23 +19,23 @@ export default function StoreMap() {
       <div className="relative w-full h-[360px] sm:h-[420px] md:h-[480px]">
         {/* OpenStreetMap Interactive Iframe */}
         <iframe
-          title="Poonch Pet Store Location"
+          title="Zyricx Location"
           src={`https://maps.google.com/maps?q=${encodeURIComponent(address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
           className="w-full h-full border-0 filter contrast-[1.02] brightness-[1.01]"
           loading="lazy"
         />
 
         {/* Subtle Map Overlay Tint to match the soft clean aesthetic */}
-        <div className="absolute inset-0 bg-[#E050D0]/[0.02] pointer-events-none" />
+        <div className="absolute inset-0 bg-amber-500/[0.02] pointer-events-none" />
 
-        {/* ── CENTER PINK PIN MARKER (Matching Mockup Pin) ── */}
+        {/* ── CENTER AMBER PIN MARKER ── */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[90%] pointer-events-none flex flex-col items-center z-20">
           {/* Pulsing ripple ring */}
-          <div className="absolute bottom-1 w-10 h-3 bg-[#E050D0]/30 rounded-full animate-ping" />
+          <div className="absolute bottom-1 w-10 h-3 bg-amber-500/30 rounded-full animate-ping" />
           <div className="absolute bottom-1.5 w-7 h-2.5 bg-black/25 rounded-full blur-[2px]" />
 
-          {/* Custom Pink Pin */}
-          <div className="relative transform hover:scale-110 transition-transform duration-300 drop-shadow-[0_10px_16px_rgba(224,80,208,0.45)]">
+          {/* Custom Amber Pin */}
+          <div className="relative transform hover:scale-110 transition-transform duration-300 drop-shadow-[0_10px_16px_rgba(245,158,11,0.45)]">
             <svg
               width="52"
               height="64"
@@ -44,19 +44,19 @@ export default function StoreMap() {
               xmlns="http://www.w3.org/2000/svg"
               className="drop-shadow-md"
             >
-              {/* Pin Body in Pink Gradient */}
+              {/* Pin Body in Amber Gradient */}
               <defs>
-                <linearGradient id="pinPinkGrad" x1="0" y1="0" x2="52" y2="64" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#FBA8FA" />
-                  <stop offset="40%" stopColor="#E050D0" />
-                  <stop offset="100%" stopColor="#B828A8" />
+                <linearGradient id="pinAmberGrad" x1="0" y1="0" x2="52" y2="64" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stopColor="#FCD34D" />
+                  <stop offset="40%" stopColor="#F59E0B" />
+                  <stop offset="100%" stopColor="#D97706" />
                 </linearGradient>
               </defs>
               <path
                 d="M26 0C11.6406 0 0 11.6406 0 26C0 41.5 22.5 60.5 24.8 62.5C25.5 63.1 26.5 63.1 27.2 62.5C29.5 60.5 52 41.5 52 26C52 11.6406 40.3594 0 26 0Z"
-                fill="url(#pinPinkGrad)"
+                fill="url(#pinAmberGrad)"
               />
-              {/* Inner White Dot (Image 1 Style) */}
+              {/* Inner White Dot */}
               <circle cx="26" cy="25" r="9" fill="#FFFFFF" />
             </svg>
           </div>
@@ -69,7 +69,7 @@ export default function StoreMap() {
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-600">Open Now • Closes 10 PM</span>
           </div>
           <p className="font-extrabold text-xs sm:text-base text-gray-900 leading-tight">
-            Poonch Pet Store Flagship Location
+            Zyricx Flagship Location
           </p>
           <p className="text-[11px] sm:text-xs text-gray-500 mt-0.5 leading-snug line-clamp-1 sm:line-clamp-none">
             Jai Devi Nagar, Garh Road , Meerut
@@ -80,7 +80,7 @@ export default function StoreMap() {
         <div className="absolute bottom-3 right-3 sm:bottom-6 sm:right-6 z-20 flex flex-wrap items-center justify-end gap-2 max-w-[calc(100%-1.5rem)]">
           <button
             onClick={handleCopy}
-            className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 backdrop-blur-md text-gray-800 text-[11px] sm:text-xs font-semibold shadow-md border border-gray-100 hover:bg-[#E050D0] hover:text-white transition-all active:scale-95 touch-manipulation"
+            className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 backdrop-blur-md text-gray-800 text-[11px] sm:text-xs font-semibold shadow-md border border-gray-100 hover:bg-amber-500 hover:text-white transition-all active:scale-95 touch-manipulation"
             title="Copy address"
           >
             {copied ? <Check size={13} className="text-amber-500" /> : <Copy size={13} />}
@@ -91,7 +91,7 @@ export default function StoreMap() {
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-[#E050D0] text-white text-[11px] sm:text-xs font-bold shadow-md hover:bg-[#C030B0] transition-all active:scale-95 touch-manipulation"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl bg-amber-500 text-white text-[11px] sm:text-xs font-bold shadow-md hover:bg-amber-600 transition-all active:scale-95 touch-manipulation"
           >
             <Navigation size={13} />
             <span>Get Directions</span>

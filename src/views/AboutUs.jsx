@@ -1,9 +1,9 @@
-import { Leaf, ShieldCheck, Heart } from 'lucide-react';
+import { Sparkles, ShieldCheck, Truck } from 'lucide-react';
 
 const VALUES = [
-  { icon: Leaf, title: 'Natural Materials Only', desc: "We use 100% natural wood and non-toxic materials with zero artificial dyes or harsh chemicals. Your pet's safety is our highest priority." },
-  { icon: ShieldCheck, title: 'Pet Health & Well-Being', desc: "Our products are thoughtfully designed to enrich your pet's physical health and mental stimulation — from brain games to activity stands." },
-  { icon: Heart, title: 'Crafted with Love', desc: "Each item — from artisan hand-knitted woolen collars to interactive bird stands — is made with care and passion for animals." },
+  { icon: Sparkles, title: 'Uncompromising Quality', desc: "We source authentic, vetted products that meet strict durability and design standards. Your satisfaction is our primary benchmark." },
+  { icon: ShieldCheck, title: '100% Genuine & Verified', desc: "Every item in our catalog is rigorously checked for authenticity and packaged with care so you receive exactly what you ordered." },
+  { icon: Truck, title: 'Speed & Reliability', desc: "With express delivery across India and real-time tracking, getting your essentials has never been faster or more dependable." },
 ];
 
 const AboutUs = () => {
@@ -23,10 +23,10 @@ const AboutUs = () => {
             Who We Are
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 sm:mb-6 tracking-tight">
-            About Poonch Pet Store
+            About Zyricx
           </h1>
           <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-medium">
-            "Safe Play, Happy Tails & Feathered Friends." — This isn't just our tagline. It's our promise to you and your pets.
+            "Premium Quality, Seamless Experience & Unbeatable Value." — This is our promise to every customer.
           </p>
         </div>
       </div>
@@ -37,7 +37,7 @@ const AboutUs = () => {
           <div className="order-2 lg:order-1 mt-6 lg:mt-0 relative w-full max-w-sm mx-auto lg:max-w-md rounded-2xl overflow-hidden border bg-muted shadow-sm flex items-center justify-center">
             <img
               src="/assets/asset-9764e424.jpeg"
-              alt="Poonch Pet Store Story"
+              alt="Zyricx Story"
               className="w-full h-auto object-contain"
             />
           </div>
@@ -45,13 +45,13 @@ const AboutUs = () => {
           <div className="order-1 lg:order-2">
             <span className="text-sm font-semibold uppercase tracking-widest text-muted-foreground block mb-2 sm:mb-3">Our Story</span>
             <h2 className="text-3xl sm:text-4xl font-bold mb-5 sm:mb-7 text-foreground tracking-tight">
-              Dedicated Pet Lovers, Through & Through
+              Curated for Excellence, Built for Convenience
             </h2>
             <div className="space-y-4 sm:space-y-5 text-base text-muted-foreground leading-relaxed">
-              <p>Welcome to Poonch Pet Store! We are dedicated pet lovers committed to creating safe, engaging, and high-quality accessories for your beloved companions.</p>
-              <p>From artisan hand-knitted woolen collars to interactive, natural-wood bird activity stands, our products are crafted to enrich your pet's physical health and mental well-being.</p>
+              <p>Welcome to Zyricx! We are an online shopping platform committed to providing high-quality lifestyle essentials, electronics, fashion, and everyday products directly to your doorstep.</p>
+              <p>Founded with a customer-first philosophy, we partner directly with trusted manufacturers and artisan producers to cut out middlemen, delivering top-tier craftsmanship at transparent, honest prices.</p>
               <p className="p-5 sm:p-6 bg-secondary/50 rounded-xl border border-border text-foreground italic shadow-sm mt-6">
-                "We prioritize non-toxic materials, durable designs, and thoughtful details so your pets can play, exercise, and lounge safely — every single day."
+                "We prioritize verified authenticity, thoughtful customer service, and ultra-fast dispatch — ensuring an enjoyable shopping experience from checkout to unboxing."
               </p>
             </div>
           </div>
@@ -82,13 +82,13 @@ const AboutUs = () => {
         {/* Wholesale CTA */}
         <div className="bg-slate-950 rounded-2xl p-10 sm:p-16 text-center shadow-lg border border-slate-800">
           <div className="max-w-2xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight">Wholesale Inquiries Welcome</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight">Wholesale & Bulk Orders Welcome</h3>
             <p className="text-slate-400 mb-8 text-base sm:text-lg leading-relaxed">
-              Available for local pet shops and avian specialists upon request. Every package includes a Care Instructions Card.
+              Partner with Zyricx for bulk corporate gifting, wholesale retail supply, and institutional procurement. Competitive pricing with dedicated account support.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm font-medium">
-              <a href="mailto:support@poonchpetstore.com" className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-slate-700 bg-slate-900 text-slate-100 hover:bg-slate-800 h-11 px-8 w-full sm:w-auto">
-                support@poonchpetstore.com
+              <a href="mailto:support@zyricx.app" className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-slate-700 bg-slate-900 text-slate-100 hover:bg-slate-800 h-11 px-8 w-full sm:w-auto">
+                support@zyricx.app
               </a>
               <a href="tel:+917088202122" className="inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 w-full sm:w-auto">
                 +91 7088202122

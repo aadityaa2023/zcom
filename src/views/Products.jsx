@@ -9,6 +9,7 @@ import api from '../services/api';
 import ProductCard, { getProductImageUrl } from '../components/ProductCard';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
+import { updateSEO } from '../utils/seo';
 
 // Dynamic filters will be computed from the database in the component
 
@@ -59,11 +60,29 @@ export default function Products() {
   const [selectedCategories, setSelectedCategories] = useState(initialCategory ? [initialCategory] : []);
 
   const [selectedTags, setSelectedTags] = useState([]);
-  const [priceRange, setPriceRange] = useState(1000);
+  const [priceRange, setPriceRange] = useState(10000);
   const [sortBy, setSortBy] = useState('latest');
   const [currentPage, setCurrentPage] = useState(1);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [addedToast, setAddedToast] = useState(null);
+
+  useEffect(() => {
+    const pageTitle = initialCategory 
+      ? `${initialCategory} – Shop Online Collection | Zyricx`
+      : search 
+      ? `Search results for "${search}" | Zyricx` 
+      : 'All Products – Explore Curated Essentials & Best Deals | Zyricx';
+    
+    const pageDesc = initialCategory
+      ? `Explore top quality ${initialCategory} products at Zyricx. Best prices, certified authentic quality, and fast shipping.`
+      : 'Browse our full catalog of top-rated products, electronics, trending lifestyle goods, and everyday essentials on Zyricx.';
+
+    updateSEO({
+      title: pageTitle,
+      description: pageDesc,
+      keywords: `${initialCategory || 'all products'}, online shopping, store, top deals, India, zyricx`,
+    });
+  }, [initialCategory, search]);
 
   useEffect(() => {
     const fetchProductsData = async () => {
@@ -207,10 +226,10 @@ export default function Products() {
               onClick={() => setSidebarOpen(true)}
               className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-gray-200 bg-white text-xs font-bold shadow-sm active:scale-95 transition-all cursor-pointer"
             >
-              <SlidersHorizontal size={13} className="text-[#E050D0]" />
+              <SlidersHorizontal size={13} className="text-primary" />
               <span>Filters</span>
-              {(selectedCategories.length > 0 || selectedTags.length > 0 || priceRange < 159) && (
-                <span className="w-2 h-2 rounded-full bg-[#E050D0]" />
+              {(selectedCategories.length > 0 || priceRange < 10000) && (
+                <span className="w-2 h-2 rounded-full bg-primary" />
               )}
             </button>
           </div>
@@ -266,7 +285,7 @@ export default function Products() {
               <input
                 type="range"
                 min={1}
-                max={1000}
+                max={10000}
                 value={priceRange}
                 onChange={(e) => {
                   setPriceRange(Number(e.target.value));
@@ -284,73 +303,6 @@ export default function Products() {
                 >
                   Apply
                 </button>
-              </div>
-            </div>
-
-
-            {/* 3. Filter by tags */}
-            <div>
-              <h3 className="text-sm font-bold text-foreground mb-3 border-b pb-2">
-                Tags
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {dynamicTags.length === 0 && <p className="text-xs text-muted-foreground">No tags found.</p>}
-                {dynamicTags.map((tag) => {
-                  const active = selectedTags.includes(tag);
-                  return (
-                    <button
-                      key={tag}
-                      onClick={() => handleTagToggle(tag)}
-                      className={cn(
-                        "text-xs font-medium px-3 py-1 rounded-md border transition-colors cursor-pointer",
-                        active
-                          ? "bg-primary text-primary-foreground border-primary"
-                          : "bg-background text-muted-foreground border-input hover:border-primary hover:text-primary"
-                      )}
-                    >
-                      {tag}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* 4. Popular products (Real Images) */}
-            <div>
-              <h3 className="text-sm font-bold text-foreground mb-4 border-b pb-2">
-                Popular products
-              </h3>
-              <div className="space-y-3.5">
-                {dbProducts.slice(0, 5).map((prod) => {
-                  const pid = prod._id || prod.id;
-                  const firstImg = prod.images?.[0];
-                  const rawImage = (typeof firstImg === 'object' && firstImg !== null ? firstImg?.url : firstImg) || prod.image;
-                  const finalImage = (rawImage && rawImage !== '[object Object]') ? rawImage : '/assets/placeholder-product.png';
-                  const imageSrc = finalImage.startsWith('http') || finalImage.startsWith('/') ? finalImage : `${BASE_URL}${finalImage}`;
-                  return (
-                    <div
-                      key={pid}
-                      onClick={() => navigate(`/product/${pid}`)}
-                      className="flex items-center gap-3 group cursor-pointer"
-                    >
-                      <div className="w-12 h-12 rounded-md bg-background border border-input overflow-hidden shrink-0 transition-colors p-0.5">
-                        <img
-                          src={imageSrc}
-                          alt={prod.name}
-                          className="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform"
-                        />
-                      </div>
-                      <div>
-                        <h4 className="text-xs font-semibold text-foreground group-hover:text-primary transition-colors leading-tight line-clamp-1">
-                          {prod.name}
-                        </h4>
-                        <p className="text-xs font-bold text-muted-foreground mt-0.5">
-                          ₹{(prod.price || 0).toFixed(2)}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
               </div>
             </div>
 
@@ -406,39 +358,14 @@ export default function Products() {
                   <input
                     type="range"
                     min={1}
-                    max={1000}
+                    max={10000}
                     value={priceRange}
                     onChange={(e) => setPriceRange(Number(e.target.value))}
                     className="w-full h-1.5 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
                   />
                   <div className="flex justify-between text-[10px] text-muted-foreground mt-1">
                     <span>₹1</span>
-                    <span>₹1000</span>
-                  </div>
-                </div>
-
-
-                {/* Tags */}
-                <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-foreground mb-2">Tags</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {dynamicTags.map((tag) => {
-                      const active = selectedTags.includes(tag);
-                      return (
-                        <button
-                          key={tag}
-                          onClick={() => handleTagToggle(tag)}
-                          className={cn(
-                            "text-[11px] font-medium px-2.5 py-1 rounded-md border transition-colors cursor-pointer",
-                            active
-                              ? "bg-primary text-primary-foreground border-primary"
-                              : "bg-background text-muted-foreground border-input"
-                          )}
-                        >
-                          {tag}
-                        </button>
-                      );
-                    })}
+                    <span>₹10,000</span>
                   </div>
                 </div>
 
@@ -446,7 +373,7 @@ export default function Products() {
                 <div className="pt-2 space-y-2">
                   <button
                     onClick={() => setSidebarOpen(false)}
-                    className="w-full py-3 bg-[#E050D0] hover:bg-[#C035B0] text-white font-bold text-xs rounded-full shadow-md active:scale-95 transition-all cursor-pointer"
+                    className="w-full py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-xs rounded-full shadow-md active:scale-95 transition-all cursor-pointer"
                   >
                     Apply Filters
                   </button>
@@ -454,7 +381,7 @@ export default function Products() {
                     onClick={() => {
                       setSelectedCategories([]);
                       setSelectedTags([]);
-                      setPriceRange(159);
+                      setPriceRange(10000);
                       setSelectedPet('');
                       setSidebarOpen(false);
                     }}
@@ -515,7 +442,7 @@ export default function Products() {
                   onClick={() => {
                     setSelectedCategories([]);
                     setSelectedTags([]);
-                    setPriceRange(1000);
+                    setPriceRange(10000);
                     setSelectedPet('');
                   }}
                   className="text-xs font-medium text-primary hover:underline"

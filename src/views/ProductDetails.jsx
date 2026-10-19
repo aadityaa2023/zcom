@@ -8,6 +8,7 @@ import { Badge } from '../components/ui/badge';
 import ProductCard, { getProductImageUrl } from '../components/ProductCard';
 import { Minus, Plus, ShoppingCart, Truck, ShieldCheck, AlertCircle, CheckCircle2, ChevronDown, ChevronUp, Star, Package, RefreshCw } from 'lucide-react';
 import { Skeleton } from '../components/ui/skeleton';
+import { updateSEO } from '../utils/seo';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -40,10 +41,59 @@ const ProductDetails = () => {
       setActiveImageIndex(0);
       try {
         const res = await api.getProductById(id);
-        setProduct(res.data);
-        if (res.data.variants && res.data.variants.length > 0) {
-          setSelectedVariant(res.data.variants[0]);
+        const p = res.data;
+        setProduct(p);
+        if (p.variants && p.variants.length > 0) {
+          setSelectedVariant(p.variants[0]);
         }
+
+        // Top-Level Dynamic Product SEO & Schema.org JSON-LD
+        const primaryImg = p.images && p.images.length > 0
+          ? (typeof p.images[0] === 'string' ? p.images[0] : p.images[0].url)
+          : '/logo.svg';
+        
+        const productSchema = {
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: p.name,
+          image: [primaryImg.startsWith('http') ? primaryImg : `${window.location.origin}${primaryImg}`],
+          description: p.shortDescription || p.description?.substring(0, 160) || p.name,
+          sku: p.sku || p._id,
+          brand: {
+            '@type': 'Brand',
+            name: p.brand || 'Zcom',
+          },
+          offers: {
+            '@type': 'Offer',
+            url: window.location.href,
+            priceCurrency: p.currency || 'INR',
+            price: p.price,
+            priceValidUntil: '2028-12-31',
+            itemCondition: 'https://schema.org/NewCondition',
+            availability: (p.stock > 0) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+            seller: {
+              '@type': 'Organization',
+              name: 'Zcom',
+            },
+          },
+          ...(p.numReviews > 0 ? {
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: p.rating || 5,
+              reviewCount: p.numReviews || 1,
+              bestRating: 5,
+              worstRating: 1,
+            },
+          } : {}),
+        };
+
+        updateSEO({
+          title: `${p.name} – Buy Online at Best Price`,
+          description: p.shortDescription || p.description?.substring(0, 160) || `Buy ${p.name} online at Zyricx with fast shipping and authentic quality guarantee.`,
+          keywords: `${p.name}, ${p.category || 'shopping'}, buy online, deals, zyricx`,
+          image: primaryImg,
+          schema: productSchema,
+        });
         
         // Fetch recommended products from the same category
         try {
@@ -221,7 +271,7 @@ const ProductDetails = () => {
             {product.name}
           </h1>
           
-          <p className="text-sm text-muted-foreground font-medium mb-4">By <span className="font-bold text-gray-800">{product.brand || 'PetStore'}</span> • SKU: {product.sku || 'N/A'}</p>
+          <p className="text-sm text-muted-foreground font-medium mb-4">By <span className="font-bold text-gray-800">{product.brand || 'Zyricx'}</span> • SKU: {product.sku || 'N/A'}</p>
           
           <div className="flex items-end gap-3 mb-4">
             <p className="text-3xl sm:text-4xl font-extrabold text-brand-pink">
@@ -391,10 +441,12 @@ const ProductDetails = () => {
                     <span className="text-gray-500 font-medium">Weight</span>
                     <span className="text-gray-900 font-bold text-right">{product.shipping?.weight ? `${product.shipping.weight} ${product.shipping.weightUnit}` : 'N/A'}</span>
                   </div>
-                  <div className="flex justify-between py-3 border-b border-gray-100">
-                    <span className="text-gray-500 font-medium">Pet Type</span>
-                    <span className="text-gray-900 font-bold text-right capitalize">{product.petType}</span>
-                  </div>
+                  {product.petType && product.petType !== 'all' && product.petType !== 'parrot' && (
+                    <div className="flex justify-between py-3 border-b border-gray-100">
+                      <span className="text-gray-500 font-medium">Type / Category</span>
+                      <span className="text-gray-900 font-bold text-right capitalize">{product.petType}</span>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <p className="text-gray-500">No specifications provided.</p>

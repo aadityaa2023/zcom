@@ -38,10 +38,10 @@ export default function Blog() {
             Our Journal
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight mb-5">
-            Avian Care & Tips
+            Insights & Trends
           </h1>
           <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-            Expert advice, training tips, and the latest news in pet bird care to help your feathered family members thrive.
+            Buying guides, lifestyle trends, product reviews, and unboxing highlights from the Zyricx editorial team.
           </p>
         </div>
       </section>

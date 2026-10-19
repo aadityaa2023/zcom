@@ -1,19 +1,18 @@
 import { CheckCircle } from 'lucide-react';
 
 const STEPS = [
-  { n: 1, title: 'Initiate Return', desc: 'Log into your account, go to "My Orders", and select the item(s) to return. Generate a return label within 30 days of delivery.' },
-  { n: 2, title: 'Pack Your Item', desc: 'Ensure the item is unused and in its original packaging. For woolen products, fold gently. For wooden items, use the original wrap.' },
-  { n: 3, title: 'Ship It Back', desc: 'Attach the provided return label to the outside of the box and drop it at your nearest carrier location.' },
-  { n: 4, title: 'Receive Refund', desc: 'Once received and inspected, a full refund or replacement will be processed within 3–5 business days.' },
+  { n: 1, title: 'Initiate Return', desc: 'Log into your account, go to "My Orders", and select the item(s) to return or exchange within 7 days of delivery.' },
+  { n: 2, title: 'Pack Your Item', desc: 'Ensure the item is in original condition, unused, with all original tags, accessories, and packaging intact.' },
+  { n: 3, title: 'Ship It Back', desc: 'Hand the package to our scheduled doorstep pickup courier or attach the provided return shipping label.' },
+  { n: 4, title: 'Receive Refund', desc: 'Once received and quality-checked, your refund will be credited to your original payment method within 3–5 business days.' },
 ];
 
 const POLICY_POINTS = [
-  'Items must be returned within 30 days of the delivery date.',
-  'Merchandise must be unused and in its original packaging with all tags attached.',
-  'Damaged or defective items are eligible for an immediate replacement or full refund.',
-  'Woolen products must be unwashed and free from pet hair for return eligibility.',
-  'Wooden items must be unassembled and free of bite marks for return eligibility.',
-  'Original shipping charges are non-refundable unless the return is due to our error.',
+  'Items must be returned within 7 days of the delivery date.',
+  'Merchandise must be unused and in its original retail packaging with all warranty cards and tags attached.',
+  'Damaged, defective, or incorrect items are eligible for an immediate replacement or full refund.',
+  'Electronics and sealed accessories must have all tamper seals intact unless opened to report physical transit damage.',
+  'Original shipping charges are non-refundable unless the return is due to our shipping error.',
 ];
 
 const Returns = () => {
@@ -67,8 +66,8 @@ const Returns = () => {
           <p className="font-bold text-base sm:text-lg mb-1">Need Help with a Return?</p>
           <p className="text-white/65 text-xs sm:text-sm mb-3">Our team makes the process seamless for you.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-brand-pink font-semibold text-xs sm:text-sm">
-            <a href="mailto:support@poonchpetstore.com" className="hover:underline">
-              support@poonchpetstore.com
+            <a href="mailto:support@zyricx.app" className="hover:underline">
+              support@zyricx.app
             </a>
             <span className="hidden sm:inline text-brand-pink/40">|</span>
             <a href="tel:+917088202122" className="hover:underline">

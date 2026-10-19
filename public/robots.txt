@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Allow: /products
+Allow: /product/*
+Allow: /about
+Allow: /contact
+Allow: /blog
+Allow: /faq
+Allow: /shipping
+Allow: /returns
+
+# Disallow private user and admin routes from search engine crawlers
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /checkout
+Disallow: /profile
+Disallow: /orders
+Disallow: /login
+Disallow: /register
+Disallow: /api/*
+
+# Sitemap index
+Sitemap: https://zyricx.app/sitemap.xml
