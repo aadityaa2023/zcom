@@ -7,7 +7,7 @@ const OrderSuccess = () => {
 
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 text-center">
-      <CheckCircle size={100} className="text-emerald-500 mb-6" />
+      <CheckCircle size={100} className="text-amber-500 mb-6" />
       <h1 className="text-4xl font-extrabold text-foreground mb-4">
         Payment Successful!
       </h1>

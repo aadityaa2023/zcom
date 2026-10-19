@@ -466,7 +466,7 @@ const OrderDetails = () => {
                 </span>
               </div>
               {order.discountAmount > 0 && (
-                <div className="flex justify-between text-emerald-600 font-semibold">
+                <div className="flex justify-between text-amber-600 font-semibold">
                   <span>Discount {order.couponCode ? `(${order.couponCode})` : ''}</span>
                   <span>-₹{order.discountAmount.toFixed(2)}</span>
                 </div>

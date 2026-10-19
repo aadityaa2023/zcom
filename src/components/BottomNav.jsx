@@ -63,7 +63,7 @@ const BottomNav = () => {
                 {item.label}
               </span>
               {isActive && (
-                <div className="absolute bottom-0 w-8 h-0.5 bg-gradient-to-r from-amber-500 to-emerald-500 rounded-t-full" />
+                <div className="absolute bottom-0 w-8 h-0.5 bg-gradient-to-r from-amber-500 to-yellow-500 rounded-t-full" />
               )}
             </button>
           );

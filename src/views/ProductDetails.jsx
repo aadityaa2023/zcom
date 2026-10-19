@@ -259,7 +259,7 @@ const ProductDetails = () => {
             <ul className="mb-6 space-y-2">
               {product.highlights.map((hlt, idx) => (
                 <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
-                  <CheckCircle2 size={16} className="text-green-500 mt-0.5 shrink-0" />
+                  <CheckCircle2 size={16} className="text-amber-500 mt-0.5 shrink-0" />
                   <span>{hlt}</span>
                 </li>
               ))}
@@ -277,8 +277,8 @@ const ProductDetails = () => {
                 <AlertCircle size={16} /> Only {product.stock} left — order soon!
               </div>
             ) : (
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-50 text-emerald-700 font-bold text-xs sm:text-sm border border-emerald-200">
-                <CheckCircle2 size={16} /> In Stock ({product.stock} available)
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-yellow-50 text-amber-800 font-bold text-xs sm:text-sm border border-yellow-200">
+                <CheckCircle2 size={16} className="text-amber-600" /> In Stock ({product.stock} available)
               </div>
             )}
           </div>
@@ -316,8 +316,8 @@ const ProductDetails = () => {
           </div>
 
           {cartMessage && (
-            <div className="mb-6 inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-green-700 bg-green-50 px-3.5 py-1.5 rounded-full border border-green-200">
-              <CheckCircle2 size={16} />
+            <div className="mb-6 inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-amber-800 bg-amber-50 px-3.5 py-1.5 rounded-full border border-amber-200">
+              <CheckCircle2 size={16} className="text-amber-600" />
               <span>{cartMessage}</span>
             </div>
           )}
@@ -334,7 +334,7 @@ const ProductDetails = () => {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-green-50 text-green-600 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
                 <RefreshCw size={18} />
               </div>
               <div>
@@ -410,7 +410,7 @@ const ProductDetails = () => {
                 <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{product.care || 'No specific care instructions provided.'}</p>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2"><Package size={20} className="text-green-500"/> Feeding/Usage Instructions</h3>
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2"><Package size={20} className="text-amber-500"/> Feeding/Usage Instructions</h3>
                 {product.feedingInstructions?.description ? (
                   <div className="space-y-3">
                     <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{product.feedingInstructions.description}</p>
@@ -546,7 +546,7 @@ const ProductDetails = () => {
                   <Star size={12} className="text-gray-400" fill="currentColor"/>
                   <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
                     <div 
-                      className={`h-full ${star >= 4 ? 'bg-green-500' : star === 3 ? 'bg-amber-500' : 'bg-red-500'}`} 
+                      className={`h-full ${star >= 4 ? 'bg-amber-400' : star === 3 ? 'bg-yellow-500' : 'bg-red-500'}`} 
                       style={{ width: getRatingPercentage(star) }}
                     />
                   </div>
@@ -571,7 +571,7 @@ const ProductDetails = () => {
                           {[...Array(5)].map((_, i) => <Star key={i} size={12} fill={i < review.rating ? "currentColor" : "none"} />)}
                         </div>
                         <span className="text-xs font-semibold text-gray-400 flex items-center gap-1">
-                          <CheckCircle2 size={12} className="text-green-500"/> Verified Buyer
+                          <CheckCircle2 size={12} className="text-amber-500"/> Verified Buyer
                         </span>
                       </div>
                     </div>

@@ -211,7 +211,7 @@ const Profile = () => {
             </div>
 
             {message && (
-              <div className={`p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm font-medium ${isError ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'}`}>
+              <div className={`p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm font-medium ${isError ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-amber-50 text-amber-800 border border-amber-200'}`}>
                 {message}
               </div>
             )}

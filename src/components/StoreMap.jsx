@@ -65,8 +65,8 @@ export default function StoreMap() {
         {/* ── TOP-LEFT FLOATING STORE BADGE ── */}
         <div className="absolute top-3 left-3 sm:top-6 sm:left-6 z-20 bg-white/95 backdrop-blur-md px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl shadow-lg border border-gray-100 max-w-[calc(100%-1.5rem)] sm:max-w-xs transition-all">
           <div className="flex items-center gap-2 mb-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-600">Open Now • Closes 10 PM</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
+            <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-600">Open Now • Closes 10 PM</span>
           </div>
           <p className="font-extrabold text-xs sm:text-base text-gray-900 leading-tight">
             Poonch Pet Store Flagship Location
@@ -83,7 +83,7 @@ export default function StoreMap() {
             className="flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 backdrop-blur-md text-gray-800 text-[11px] sm:text-xs font-semibold shadow-md border border-gray-100 hover:bg-[#E050D0] hover:text-white transition-all active:scale-95 touch-manipulation"
             title="Copy address"
           >
-            {copied ? <Check size={13} className="text-emerald-500" /> : <Copy size={13} />}
+            {copied ? <Check size={13} className="text-amber-500" /> : <Copy size={13} />}
             <span>{copied ? 'Copied!' : 'Copy Address'}</span>
           </button>
 

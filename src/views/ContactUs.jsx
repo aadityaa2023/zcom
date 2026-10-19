@@ -100,8 +100,8 @@ export default function ContactUs() {
               <div className="bg-card text-card-foreground rounded-xl p-6 sm:p-10 border shadow-sm">
                 
                 {submitted && (
-                  <div className="mb-6 p-4 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium flex items-center gap-3">
-                    <CheckCircle2 size={16} className="text-emerald-600 shrink-0" />
+                  <div className="mb-6 p-4 rounded-md bg-amber-50 border border-amber-200 text-amber-800 text-sm font-medium flex items-center gap-3">
+                    <CheckCircle2 size={16} className="text-amber-600 shrink-0" />
                     <span>Thank you! Your message has been sent. We'll be in touch within 24 hours.</span>
                   </div>
                 )}

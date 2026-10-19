@@ -183,7 +183,7 @@ const Navbar = () => {
           {/* Left: Phone & Support */}
           <div className="flex items-center gap-4 sm:gap-6">
             <span className="flex items-center gap-1.5 text-amber-400 font-semibold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
               Fast & Free Shipping Across India
             </span>
             <span className="text-gray-600">•</span>
@@ -206,7 +206,7 @@ const Navbar = () => {
 
           {/* Right: Guarantee */}
           <div className="hidden md:flex items-center gap-4 text-gray-300 shrink-0">
-            <span className="text-emerald-400 font-semibold flex items-center gap-1">
+            <span className="text-amber-300 font-semibold flex items-center gap-1">
               ✓ 100% Genuine Products
             </span>
             <span className="text-gray-600">•</span>
@@ -270,7 +270,7 @@ const Navbar = () => {
                     className={cn(
                       "text-sm font-semibold transition-all relative py-1",
                       isActive
-                        ? "text-amber-600 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2.5px] after:bg-gradient-to-r after:from-amber-500 after:to-emerald-500 after:rounded-full"
+                        ? "text-amber-600 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:right-0 after:h-[2.5px] after:bg-gradient-to-r after:from-amber-400 after:to-yellow-500 after:rounded-full"
                         : "text-gray-800 hover:text-amber-600"
                     )}
                   >

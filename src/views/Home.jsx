@@ -272,7 +272,7 @@ export default function Home() {
                 <div className="max-w-2xl text-white transform transition-all duration-[1200ms] delay-300">
                   {banner.subtitle && (
                     <div className="flex items-center gap-3 mb-5">
-                      <span className="w-10 h-[2.5px] bg-gradient-to-r from-amber-500 to-emerald-500"></span>
+                      <span className="w-10 h-[2.5px] bg-gradient-to-r from-amber-400 to-yellow-500"></span>
                       <span className="font-extrabold text-[11px] sm:text-xs uppercase tracking-[0.2em] text-amber-400">
                         {banner.subtitle}
                       </span>
@@ -327,7 +327,7 @@ export default function Home() {
             <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12 relative z-10 w-full h-full flex items-center">
               <div className="max-w-2xl text-white">
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="w-10 h-[2.5px] bg-gradient-to-r from-amber-500 to-emerald-500"></span>
+                  <span className="w-10 h-[2.5px] bg-gradient-to-r from-amber-400 to-yellow-500"></span>
                   <span className="font-extrabold text-[11px] sm:text-xs uppercase tracking-[0.2em] text-amber-400">
                     Premium Online Store
                   </span>

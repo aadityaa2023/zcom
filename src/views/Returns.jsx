@@ -55,7 +55,7 @@ const Returns = () => {
           <ul className="space-y-3">
             {POLICY_POINTS.map((p, i) => (
               <li key={i} className="flex gap-2.5 sm:gap-3 items-start text-xs sm:text-sm text-muted-foreground border-b border-border pb-3 last:border-b-0 last:pb-0 leading-relaxed">
-                <CheckCircle size={15} className="text-emerald-500 shrink-0 mt-0.5" />
+                <CheckCircle size={15} className="text-amber-500 shrink-0 mt-0.5" />
                 <span>{p}</span>
               </li>
             ))}

@@ -387,7 +387,7 @@ const Checkout = () => {
                 <span className="font-medium">{shippingPrice === 0 ? 'Free' : `₹${shippingPrice.toFixed(2)}`}</span>
               </div>
               {appliedCoupon && (
-                <div className="flex justify-between text-emerald-600 font-medium">
+                <div className="flex justify-between text-amber-600 font-medium">
                   <span>Discount ({appliedCoupon.code}):</span>
                   <span>-₹{appliedCoupon.discountAmount.toFixed(2)}</span>
                 </div>

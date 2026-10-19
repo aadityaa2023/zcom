@@ -67,9 +67,9 @@ const AdminDashboard = () => {
   );
 
   const statCards = [
-    { title: 'Total Revenue', value: `₹${data.revenue.toFixed(2)}`, icon: <DollarSign size={24} className="text-white" />, gradient: 'bg-gradient-to-br from-emerald-400 to-teal-500' },
+    { title: 'Total Revenue', value: `₹${data.revenue.toFixed(2)}`, icon: <DollarSign size={24} className="text-white" />, gradient: 'bg-gradient-to-br from-amber-400 via-amber-500 to-yellow-600' },
     { title: 'Total Orders', value: data.orders, icon: <ShoppingCart size={24} className="text-white" />, gradient: 'bg-gradient-to-br from-blue-400 to-cyan-500' },
-    { title: 'Total Products', value: data.products, icon: <Package size={24} className="text-white" />, gradient: 'bg-gradient-to-br from-amber-400 to-orange-500' },
+    { title: 'Total Products', value: data.products, icon: <Package size={24} className="text-white" />, gradient: 'bg-gradient-to-br from-amber-500 to-orange-500' },
     { title: 'Total Users', value: data.users, icon: <Users size={24} className="text-white" />, gradient: 'bg-gradient-to-br from-purple-500 to-indigo-600' },
   ];
 
@@ -162,7 +162,7 @@ const AdminDashboard = () => {
                     <td className="px-6 py-4 text-right">
                       <Badge variant="outline">{product.quantity}</Badge>
                     </td>
-                    <td className="px-6 py-4 text-right font-bold text-emerald-600">₹{product.revenue.toFixed(2)}</td>
+                    <td className="px-6 py-4 text-right font-bold text-amber-600">₹{product.revenue.toFixed(2)}</td>
                   </tr>
                 ))}
                 {data.topProducts.length === 0 && (

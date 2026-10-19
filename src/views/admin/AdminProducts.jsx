@@ -116,7 +116,7 @@ const AdminProducts = () => {
                     <td colSpan={6} className="px-6 py-16 text-center">
                       {activeTab === 1 ? (
                         <div className="flex flex-col items-center">
-                          <CheckCircle2 size={48} className="text-emerald-500 mb-2 opacity-80" />
+                          <CheckCircle2 size={48} className="text-amber-500 mb-2 opacity-80" />
                           <h3 className="font-bold text-lg mb-1">All caught up!</h3>
                           <p className="text-muted-foreground">No low stock products. Everything is well stocked.</p>
                         </div>
